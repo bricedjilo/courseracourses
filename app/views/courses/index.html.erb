@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Courses#index</h1>
+
+    <h1>Search for - <%= @search_term %></h1>
+
+    <table class="table">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <% @courses.each do |course| %>
+            <tr class=<%= cycle('even', 'odd') %>>
+                <td><%= image_tag(course["smallIcon"]) %></td>
+                <td><%= course["name"] %></td>
+                <td><%= course["shortDescription"] %></td>
+            </tr>
+        <% end %>
+    </table>
+</div>
+
+
+<p>Find me in app/views/courses/index.html.erb</p>
